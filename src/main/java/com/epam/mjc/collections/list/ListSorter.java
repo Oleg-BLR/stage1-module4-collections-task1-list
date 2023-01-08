@@ -1,6 +1,9 @@
 package com.epam.mjc.collections.list;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class ListSorter {
 
@@ -9,12 +12,6 @@ public class ListSorter {
         List<String> initialList = new ArrayList<>(Arrays.asList("7", "10", "6", "-7", "-2", "0", "-2", "-23"));
         ListSorter listSorter = new ListSorter();
         listSorter.sort(initialList);
-//        listSorter.sort(initialList);
-//
-//        System.out.println(listSorter.fillElementsWithArrayList(initialList));
-////        Collections.sort(elementList, new ModifyedIntComparator());
-//        System.out.println(listSorter.fillModifiedStringList(listSorter.fillElementsWithArrayList(initialList)));
-
     }
 
     public void sort(List<String> sourceList) {
@@ -23,14 +20,14 @@ public class ListSorter {
         System.out.println(fillModifiedStringList(fillElementsWithArrayList(sourceList)));
     }
 
-    private List<String> fillModifiedStringList(List<Element> arrayListWithElements) {
-        List<String> modifiedStringList = new ArrayList<>();
-        for (Element element : arrayListWithElements) {
-            modifiedStringList.add(0, element.initialStringValue);
-        }
+//    public List<String> sort(List<String> sourceList) {
+////        ArrayList<Element> listOfElements = new ArrayList<>();
+////        ArrayList<String> initialList = new ArrayList<>();
+////        System.out.println(fillModifiedStringList(fillElementsWithArrayList(sourceList)));
+//        return fillModifiedStringList(fillElementsWithArrayList(sourceList));
+//    }
 
-        return modifiedStringList;
-    }
+
 
     private List<Element> fillElementsWithArrayList(List<String> initialListData) {
         List<Element> arrayListWithElements = new ArrayList<>();
@@ -47,8 +44,12 @@ public class ListSorter {
         return arrayListWithElements;
     }
 
-
-
-
+    private List<String> fillModifiedStringList(List<Element> arrayListWithElements) {
+        List<String> modifiedStringList = new ArrayList<>();
+        for (Element element : arrayListWithElements) {
+            modifiedStringList.add(0, element.initialStringValue);
+        }
+        return modifiedStringList;
+    }
 }
 
