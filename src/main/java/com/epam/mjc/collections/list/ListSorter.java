@@ -28,7 +28,6 @@ public class ListSorter {
 //    }
 
 
-
     private List<Element> fillElementsWithArrayList(List<String> initialListData) {
         List<Element> arrayListWithElements = new ArrayList<>();
         int i = 0;
